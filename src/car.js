@@ -5,7 +5,7 @@ export class Car {
     this.angle = angle;
     this.speed = scaled.nMAX_SPEED * (0.9 + Math.random() * 0.1);
     this.history = [];
-    this.carLength = 3;
+    this.carLength = 5;
     this.slowing = false;
   }
 
@@ -26,10 +26,10 @@ export class Car {
     if(gap_actual < 0) gap_actual += Math.PI * 2;
     if(gap_actual <= lengthRad) this.speed = 0;
 
-    if (gap < scaled.nSLOWING_DISTANCE && this.speed > frontCar.speed){
-      this.speed -= SLOWING_FACTOR;
-      this.slowing;
-    }
+    // if (gap < scaled.nSLOWING_DISTANCE && this.speed > frontCar.speed){
+    //   this.speed -= scaled.nDECELERATE;
+    //   this.slowing;
+    // }
 
     if (gap < scaled.nSAFE) {
       this.speed -= scaled.nBRAKE;

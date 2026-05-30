@@ -18,7 +18,8 @@ export const scaled = {
   nBRAKE: 0,
   nSAFE: 0,
   nDELAY: 0,
-  nSLOWING_DISTANCE: 0
+  nSLOWING_DISTANCE: 0,
+  nDECELERATE: 0
 };
 
 export function toRad(val) {
@@ -29,8 +30,9 @@ export function updateScaledVariables() {
   scaled.nMAX_SPEED = toRad(params.MAX_SPEED) * (params.stepSize / 1000);
   scaled.nACCEL = toRad(params.ACCEL) * (params.stepSize / 1000) * (params.stepSize / 1000);
   scaled.nBRAKE = toRad(params.BRAKE) * (params.stepSize / 1000) * (params.stepSize / 1000);
+  // scaled.nDECELERATE = toRad(params.SLOWING_FACTOR) * (params.stepSize / 1000) * (params.stepSize / 1000);
   scaled.nSAFE = toRad(params.SAFE);
-  scaled.nSLOWING_DISTANCE = toRad(params.SLOWING_DISTANCE)
+  // scaled.nSLOWING_DISTANCE = toRad(params.SLOWING_DISTANCE)
   
   // Menggunakan Math.round agar indeks array tidak menerima nilai float
   scaled.nDELAY = Math.max(1, Math.round(params.DELAY / params.stepSize)); 
