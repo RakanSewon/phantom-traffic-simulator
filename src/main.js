@@ -1,5 +1,5 @@
 import './style.css';
-import { Car } from './Car.js';
+import { Car } from './car.js';
 import { scaled } from './config.js';
 import { initControllers, updateDashboardStats } from './ui.js';
 
