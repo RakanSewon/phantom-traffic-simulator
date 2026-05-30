@@ -2,13 +2,13 @@
 export const params = {
   MAX_SPEED: 40,
   ACCEL: 5,
-  BRAKE: 8,
+  BRAKE: 12,
   SAFE: 6,
   DELAY: 750,
   TRACK_LENGTH: 200,
   stepSize: 10,
   SLOWING_DISTANCE: 30,
-  SLOWING_FACTOR: 25
+  SLOWING_FACTOR: 5
 };
 
 // Parameter yang sudah di-scaling untuk kalkulasi fisika canvas

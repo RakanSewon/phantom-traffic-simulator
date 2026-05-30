@@ -27,7 +27,7 @@ export class Car {
     if(gap_actual <= lengthRad) this.speed = 0;
 
     if (gap < scaled.nSLOWING_DISTANCE && this.speed > frontCar.speed){
-      this.speed -= SLOWING_FACTOR / gap / frontCar.speed;
+      this.speed -= SLOWING_FACTOR;
       this.slowing;
     }
 
