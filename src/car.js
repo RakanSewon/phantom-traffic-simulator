@@ -33,7 +33,7 @@ export class Car {
 
     if (gap < scaled.nSAFE) {
       this.speed -= scaled.nBRAKE;
-      this.slowing;
+      this.slowing = true;
     } else {
       this.speed += scaled.nACCEL;
       this.slowing = false;
